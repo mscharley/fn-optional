@@ -4,6 +4,7 @@
   "description": "Functional implementations of the option type for TypeScript",
   "main": "index.js",
   "scripts": {
+    "compile": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Scharley <matt@scharley.me>",

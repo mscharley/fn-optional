@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": [
+      "es5",
+      "es2015",
+      "es2016",
+      "es2017",
+    ],
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true
+  }
+}

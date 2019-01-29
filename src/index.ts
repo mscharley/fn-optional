@@ -1,5 +1,5 @@
 import { Option } from "./option";
-import { None } from "./none";
+import { ElementNotFoundError, None } from "./none";
 import { Some } from "./some";
 
 export default function option<T>(v: T): Option<NonNullable<T>> {
@@ -11,4 +11,4 @@ export default function option<T>(v: T): Option<NonNullable<T>> {
   }
 };
 
-export { Option, None, Some };
+export { ElementNotFoundError as ElementNotFound, Option };

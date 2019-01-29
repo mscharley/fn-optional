@@ -1,8 +1,8 @@
 export interface Option<T> {
   get(): T;
-  getOrElse(v: T): T;
+  getOrElse<U>(v: U): T | U;
   orNull(): T | null;
-  orUndefined(): T | null;
+  orUndefined(): T | undefined;
   orThrow(e: Error): T;
 
   exists(f: (v: T) => boolean): boolean;
@@ -13,7 +13,7 @@ export interface Option<T> {
   forAll(f: (v: T) => boolean): boolean;
   forEach(f: (v: T) => void): void;
   map<U>(f: (v: T) => NonNullable<U>): Option<NonNullable<U>>;
-  mapOptional<U>(f: (v: T) => U): Option<Option<NonNullable<U>>>;
+  mapIntoOption<U>(f: (v: T) => U): Option<Option<NonNullable<U>>>;
   mapNullable<U>(f: (v: T) => U): Option<NonNullable<U>>;
 
   isDefined(): boolean;
